@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Francisco Guerrero - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#a846ff",
+            "background-light": "#f7f5f8",
+            "background-dark": "#1a0f23",
+          },
+          fontFamily: { display: "Inter" },
+        },
+      },
+    };
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+    .contact-card {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .contact-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-100">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-black/10 dark:border-white/10">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="text-primary text-xl font-bold">FG</span>
+        <h2 class="text-lg font-bold leading-tight">Francisco Guerrero</h2>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#home" class="hover:text-primary transition-colors duration-300 text-sm font-medium">Inicio</a>
+        <a href="#skills" class="hover:text-primary transition-colors duration-300 text-sm font-medium">Conocimientos</a>
+        <a href="#projects" class="hover:text-primary transition-colors duration-300 text-sm font-medium">Proyectos</a>
+        <a href="#contacto" class="hover:text-primary transition-colors duration-300 text-sm font-medium">Contacto</a>
+        <a href="./assets/CURRICULUM-VITAE-FRANCISCO-GUERRERO.pdf" download
+        class="flex items-center justify-center h-12 px-6 rounded-lg bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30 hover:bg-opacity-90 transition-all duration-300">
+        Descargar CV
+      </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- INICIO -->
+  <section id="home" class="container mx-auto px-6 py-20 md:py-32 flex flex-col items-center text-center">
+    <div class="w-32 h-32 md:w-40 md:h-40 mb-6">
+        <img src="./icons/me.jpg" alt="Francisco Guerrero" class="w-full h-full rounded-full object-cover">
+
+    </div>
+    <h1 class="text-3xl md:text-5xl font-black mb-2">Francisco Guerrero</h1>
+    <p class="max-w-2xl text-black/60 dark:text-white/70 text-base md:text-lg mb-8">
+      Estudiante avanzado de Informática y Desarrollo de Software, orientado principalmente al desarrollo backend. 
+      Me apasiona diseñar y construir sistemas sólidos, eficientes y escalables.
+      Disfruto trabajar en equipo, compartir ideas y resolver problemas de forma colaborativa. 
+      Mi motivación es crear soluciones innovadoras que conecten tecnología y propósito, manteniendo siempre una actitud de aprendizaje continuo 
+      y mejora constante.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <a href="./assets/CURRICULUM-VITAE-FRANCISCO-GUERRERO.pdf" download
+        class="flex items-center justify-center h-12 px-6 rounded-lg bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30 hover:bg-opacity-90 transition-all duration-300">
+        Descargar CV
+      </a>
+      <a href="#certificados"
+        class="flex items-center justify-center h-12 px-6 rounded-lg bg-primary/10 text-primary text-sm font-bold hover:bg-primary/20 transition-all duration-300">
+        Ver Certificados
+      </a>
+    </div>
+  </section>
+
+  <!-- CONOCIMIENTOS -->
+  <section id="skills" class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 ">
+    <h2 class="text-3xl font-bold mb-12 text-center">Conocimientos</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Lenguajes -->
+      <div class="bg-white dark:bg-background-dark/50 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+        <div class="p-6">
+          <div class="flex items-center mb-4">
+            <span class="material-symbols-outlined text-primary mr-3 text-3xl">code</span>
+            <h3 class="text-xl font-bold">Lenguajes</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">JavaScript</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Python</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Java</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">C++</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">HTML</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frameworks y Librerías -->
+      <div class="bg-white dark:bg-background-dark/50 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+        <div class="p-6">
+          <div class="flex items-center mb-4">
+            <span class="material-symbols-outlined text-primary mr-3 text-3xl">build_circle</span>
+            <h3 class="text-xl font-bold">Frameworks y Librerías</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">React</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">TypeScript</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Node.js</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Express</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Spring Boot</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Tailwind CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bases de Datos -->
+      <div class="bg-white dark:bg-background-dark/50 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+        <div class="p-6">
+          <div class="flex items-center mb-4">
+            <span class="material-symbols-outlined text-primary mr-3 text-3xl">database</span>
+            <h3 class="text-xl font-bold">Bases de Datos</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">PostgreSQL</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">MongoDB</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Hibernate</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Herramientas y Tecnologías -->
+      <div class="bg-white dark:bg-background-dark/50 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+        <div class="p-6">
+          <div class="flex items-center mb-4">
+            <span class="material-symbols-outlined text-primary mr-3 text-3xl">terminal</span>
+            <h3 class="text-xl font-bold">Herramientas y Tecnologías</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Git</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Docker</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Kubernetes</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">gRPC</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">JWT</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">OAuth</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">CI/CD</span>
+            <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">ArgoCD</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+<!-- Sección Certificados -->
+<section id="certificados" class="py-16 sm:py-24">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
+        Certificados
+      </h2>
+      <p class="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
+        Mi compromiso con el aprendizaje continuo y la excelencia profesional.
+      </p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Certificado con lightbox -->
+      <div class="group relative overflow-hidden rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl">
+        <!-- Este label abre el lightbox -->
+        <label class="cursor-pointer block" for="lightbox-toggle">
+          <img
+            alt="Certificado de Inglés"
+            class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+            src="/icons/1759265796216.jpg"
+          />
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="text-center text-white p-2">
+              <h3 class="text-base font-bold">Certificado de Inglés</h3>
+              <p class="text-xs mt-1">Ver Certificado</p>
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Próximamente -->
+      <div class="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-zinc-300 dark:border-zinc-700 bg-background-light dark:bg-background-dark p-8 text-center">
+        <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+          <svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M12 6v6m0 0v6m0-6h6m-6 0H6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <h3 class="mt-4 text-sm font-medium text-zinc-900 dark:text-white">Próximamente</h3>
+        <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">Más certificados serán añadidos pronto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Input toggle oculto -->
+<input class="hidden" id="lightbox-toggle" type="checkbox" />
+
+<!-- Lightbox -->
+<div
+  id="lightbox"
+  class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80"
+>
+  <!-- Este label cierra el lightbox al hacer clic fuera -->
+  <label for="lightbox-toggle" class="absolute inset-0 cursor-pointer"></label>
+
+  <div class="relative bg-white dark:bg-background-dark p-4 rounded-lg shadow-xl max-w-4xl w-[90%] max-h-[90vh] flex flex-col items-center justify-center">
+    <img
+      alt="Certificado ampliado"
+      class="max-w-full max-h-[80vh] object-contain rounded"
+      src="/icons/1759265796216.jpg"
+    />
+    <!-- Botón cerrar -->
+    <label
+      for="lightbox-toggle"
+      class="absolute top-3 right-3 cursor-pointer text-white bg-black/50 rounded-full p-2 hover:bg-black/70"
+    >
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </label>
+  </div>
+</div>
+
+<!-- CSS necesario -->
+<style>
+  #lightbox-toggle:checked + #lightbox {
+    display: flex;
+  }
+</style>
+
+  <!-- PROYECTOS -->
+  <section id="projects" class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 -mb-10 ">
+    <h2 class="text-3xl font-bold mb-12 text-center text-background-dark dark:text-background-light">Proyectos</h2>
+
+    <div class="space-y-16">
+
+      <!-- Proyecto 1 -->
+      <div class="group grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+        <div class="md:col-span-2 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
+        <img src="/icons/chatbot.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
+        </div>
+        <div class="md:col-span-3">
+          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Chatbot de Asistencia en Salud • MAR 2024 - JUN 2024 </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Desarrollo de chatbot médico para poder consultar, agendar o borrar medicamentos, agendar turnos del medico y consultar las farmacias mas cerca
+              • Integración con APIs: Google Calendar para recordatorios y Geocoder para localización de farmacias.
+           
+            </p>
+            <div class="flex flex-wrap gap-1 mb-4">
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Docker</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">PostgreSQL</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Python</span>
+            </div>
+          <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors font-semibold" 
+                href="https://github.com/FranciscooGr/health-assistance-chatbot.git" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <span>Ver en GitHub</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+        </div>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="group grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+        <div class="md:col-span-3 md:order-last">
+          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Aplicación de Gestor de Tareas • ABR 2025 - JUN 2025</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Aplicacion Para crear editar leer y borrar tus propias tareas con prioridad, estado, fecha. Pudiendo crear carpetas y ordenar las tareas en base a la carpeta correspondiente.
+            Implementando una arquitectura en capas
+          </p>
+            <div class="flex flex-wrap gap-1 mb-4">
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">Docker</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">PostgreSQL</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">TypeScript</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">Express</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">TailwindCSS</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">Microservicios</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">React</span>
+            </div>
+         <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors font-semibold" 
+                href="https://github.com/FranciscooGr/taskManager.git" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <span>Ver en GitHub</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+        </div>
+        <div class="md:col-span-2 md:order-first rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
+        <img src="/icons/tasks.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
+        </div>
+      </div>
+
+      <!-- Proyecto 3 -->
+      <div class="group grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+        <div class="md:col-span-2 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
+        <img src="/icons/guardian.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
+        </div>
+        <div class="md:col-span-3">
+          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Juego "Guardian of the Castle" • ABR 2025 - JUL 2025</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Guardian of the Castle es un desafiante juego de rol (RPG) 2D que sumerge al jugador en un oscuro y misterioso bosque. El objetivo es claro: luchar contra enemigos que acechan en las sombras, encontrar la llave oculta para acceder a un castillo imponente y derrotar al jefe final que lo custodia.
+            Este proyecto combina un combate dinámico con una progresión de personaje por medio de mejoras instantáneas, ofreciendo una experiencia de juego gratificante y orientada a la acción.</p>
+
+            <div class="flex flex-wrap gap-1 mb-4">
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">Godot</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">GDscript</span>
+
+            </div>
+
+          <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors font-semibold" 
+                href="https://github.com/FranciscooGr/RPG-GuardianOfTheCastle.git" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <span>Ver en GitHub</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+        </div>
+      </div>
+
+      <!-- Proyecto 4 -->
+      <div class="group grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+        
+        <div class="md:col-span-3 md:order-last">
+          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">E-commerce de Zapatillas • MAR 2024 - JUN 2024  </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Aplicacion de E-commerce de zapatillas de todo tipo, donde se incluyen filtros, barra de busqueda, diseños responsivos con UX/UI, implementando tambien un carrito de compras.</p>
+          <div class="flex flex-wrap gap-1 mb-4">
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">HTML</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">JavaScript</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">CSS</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">PHP</span>
+            </div>
+          <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors font-semibold" 
+                href="https://github.com/FranciscooGr/proyectoLab3.git" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <span>Ver en GitHub</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+        </div>
+        <div class="md:col-span-2 md:order-first rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
+        <img src="/icons/ecomerce.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
+        </div>
+      </div>
+
+      <!-- Proyecto 5 -->
+      <div class="group grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+        <div class="md:col-span-2 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
+        <img src="/icons/personajeIncognito.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
+        </div>
+        <div class="md:col-span-3">
+          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Juego "Adivina el Personaje Incógnito" • JUL 2023 - NOV 2023</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4"> Desarrollo de juego interactivo donde mediante preguntas se debe adivinar el personaje incognito con solo 3 intentos, mientras la aplicacion trata de adivinar el tuyo. Implementación de interfaz gráfica con Swing para mejor experiencia de usuario 
+            y ademas un Diseño de lógica de juego para adivinanza de personajes
+          </p>
+          <div class="flex flex-wrap gap-1 mb-4">
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">Java</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">MVC</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">Swing</span>
+          </div>
+          <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors font-semibold" 
+                href="https://github.com/FranciscooGr/Facultad-Projects.git" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <span>Ver en GitHub</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+        </div>
+      </div>
+
+      <!-- Proyecto 6 -->
+      <div class="group grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+      <div class="md:col-span-2 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
+        <img src="/icons/snake.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
+      </div>
+  <div class="md:col-span-3">
+    <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Juego "Serpientes Y escaleras" • MAR 2023 - JUN 2023</h3>
+    <p class="text-gray-600 dark:text-gray-300 mb-4"> Desarrollo del clásico juego aplicando paradigma de programación funcional. 
+      Implementación de algoritmos para gestión de tablero y reglas del juego 
+    </p>
+    <div class="flex flex-wrap gap-1 mb-4">
+      <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">C++</span>
+    </div>
+    <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors font-semibold" 
+                href="https://github.com/FranciscooGr/Facultad-Projects.git" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <span>Ver en GitHub</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="container mx-auto px-6 py-20 md:py-32 -mt-10">
+    <div class="flex flex-col min-h-screen">
+      <main class="flex-grow flex flex-col items-center justify-center text-center">
+        <div class="max-w-4xl w-full">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8">Contacto</h1>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 mb-12">
+            <a class="group" href="mailto:guerrerofranciscoinf@gmail.com">
+              <div class="contact-card bg-white dark:bg-gray-800/50 p-8 rounded-xl flex flex-col items-center gap-4">
+                <svg class="h-20 w-20 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">Email</p>
+              </div>
+            </a>
+            <a class="group" href="https://www.linkedin.com/in/francisco-guerrero-0903aa302/" rel="noopener noreferrer" target="_blank">
+              <div class="contact-card bg-white dark:bg-gray-800/50 p-8 rounded-xl flex flex-col items-center gap-4">
+                <svg class="h-20 w-20 text-primary" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                </svg>
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">LinkedIn</p>
+              </div>
+            </a>
+            <a class="group" href="https://github.com/FranciscooGr" rel="noopener noreferrer" target="_blank">
+              <div class="contact-card bg-white dark:bg-gray-800/50 p-8 rounded-xl flex flex-col items-center gap-4">
+                <svg class="h-20 w-20 text-primary" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                </svg>
+                <p class="text-lg font-semibold text-gray-900 dark:text-white">GitHub</p>
+              </div>
+            </a>
+          </div>
+          <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400">
+            ¿Querés colaborar o contactarme? Estoy siempre abierto a nuevos desafíos.
+          </p>
+        </div>
+      </main>
+    </div>
+  </section>
+
+    <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+    <img 
+      id="lightbox-image"
+      src=""
+      alt="Certificado ampliado"
+      class="max-w-full max-h-full rounded-lg shadow-lg"
+    />
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
