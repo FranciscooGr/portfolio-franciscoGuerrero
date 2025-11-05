@@ -71,7 +71,7 @@
     </div>
     <h1 class="text-3xl md:text-5xl font-black mb-2">Francisco Guerrero</h1>
     <p class="max-w-2xl text-black/60 dark:text-white/70 text-base md:text-lg mb-8">
-      Estudiante avanzado de Informática y Desarrollo de Software, orientado principalmente al desarrollo backend. 
+      <strong class="font-bold text-black dark:text-white">Estudiante avanzado de Informática y Desarrollo de Software</strong>, orientado principalmente al <strong class="font-bold text-black dark:text-white">desarrollo backend</strong>. 
       Me apasiona diseñar y construir sistemas sólidos, eficientes y escalables.
       Disfruto trabajar en equipo, compartir ideas y resolver problemas de forma colaborativa. 
       Mi motivación es crear soluciones innovadoras que conecten tecnología y propósito, manteniendo siempre una actitud de aprendizaje continuo 
@@ -182,10 +182,9 @@
     </div>
 
     <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Certificado con lightbox -->
+      <!-- Certificado 1: Inglés -->
       <div class="group relative overflow-hidden rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl">
-        <!-- Este label abre el lightbox -->
-        <label class="cursor-pointer block" for="lightbox-toggle">
+        <label class="cursor-pointer block" for="lightbox-toggle-1">
           <img
             alt="Certificado de Inglés"
             class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
@@ -194,6 +193,23 @@
           <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div class="text-center text-white p-2">
               <h3 class="text-base font-bold">Certificado de Inglés</h3>
+              <p class="text-xs mt-1">Ver Certificado</p>
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <!-- Certificado 2: Nuevo certificado -->
+      <div class="group relative overflow-hidden rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl">
+        <label class="cursor-pointer block" for="lightbox-toggle-2">
+          <img
+            alt="Certificado Proyecto de investigacion cientifica"
+            class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+            src="icons/certificadoCACIC.jpg"
+          />
+          <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="text-center text-white p-2">
+              <h3 class="text-base font-bold">Certificado Proyecto de investigacion cientifica</h3>
               <p class="text-xs mt-1">Ver Certificado</p>
             </div>
           </div>
@@ -214,26 +230,41 @@
   </div>
 </section>
 
-<!-- Input toggle oculto -->
-<input class="hidden" id="lightbox-toggle" type="checkbox" />
+<!-- Input toggles ocultos (uno por cada certificado) -->
+<input class="hidden" id="lightbox-toggle-1" type="checkbox" />
+<input class="hidden" id="lightbox-toggle-2" type="checkbox" />
 
-<!-- Lightbox -->
-<div
-  id="lightbox"
-  class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80"
->
-  <!-- Este label cierra el lightbox al hacer clic fuera -->
-  <label for="lightbox-toggle" class="absolute inset-0 cursor-pointer"></label>
-
+<!-- Lightbox 1: Inglés -->
+<div class="lightbox fixed inset-0 z-50 hidden items-center justify-center bg-black/80">
+  <label for="lightbox-toggle-1" class="absolute inset-0 cursor-pointer"></label>
   <div class="relative bg-white dark:bg-background-dark p-4 rounded-lg shadow-xl max-w-4xl w-[90%] max-h-[90vh] flex flex-col items-center justify-center">
     <img
-      alt="Certificado ampliado"
+      alt="Certificado de Inglés ampliado"
       class="max-w-full max-h-[80vh] object-contain rounded"
       src="icons/1759265796216.jpg"
     />
-    <!-- Botón cerrar -->
     <label
-      for="lightbox-toggle"
+      for="lightbox-toggle-1"
+      class="absolute top-3 right-3 cursor-pointer text-white bg-black/50 rounded-full p-2 hover:bg-black/70"
+    >
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </label>
+  </div>
+</div>
+
+<!-- Lightbox 2: Nuevo certificado -->
+<div class="lightbox fixed inset-0 z-50 hidden items-center justify-center bg-black/80">
+  <label for="lightbox-toggle-2" class="absolute inset-0 cursor-pointer"></label>
+  <div class="relative bg-white dark:bg-background-dark p-4 rounded-lg shadow-xl max-w-4xl w-[90%] max-h-[90vh] flex flex-col items-center justify-center">
+    <img
+      alt="Certificado CACIC"
+      class="max-w-full max-h-[80vh] object-contain rounded"
+      src="icons/certificadoCACIC.jpg"
+    />
+    <label
+      for="lightbox-toggle-2"
       class="absolute top-3 right-3 cursor-pointer text-white bg-black/50 rounded-full p-2 hover:bg-black/70"
     >
       <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -245,7 +276,10 @@
 
 <!-- CSS necesario -->
 <style>
-  #lightbox-toggle:checked + #lightbox {
+  #lightbox-toggle-1:checked ~ .lightbox:nth-of-type(1) {
+    display: flex;
+  }
+  #lightbox-toggle-2:checked ~ .lightbox:nth-of-type(2) {
     display: flex;
   }
 </style>
@@ -262,9 +296,10 @@
         <img src="icons/chatbot.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
         </div>
         <div class="md:col-span-3">
-          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Chatbot de Asistencia en Salud • MAR 2024 - JUN 2024 </h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">Desarrollo de chatbot médico para poder consultar, agendar o borrar medicamentos, agendar turnos del medico y consultar las farmacias mas cerca
-              • Integración con APIs: Google Calendar para recordatorios y Geocoder para localización de farmacias.
+          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Chatbot de Asistencia en Salud </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Desarrollo de un chatbot médico conversacional diseñado para automatizar y simplificar la gestión de la salud personal. 
+            El sistema ofrece funcionalidades clave, incluyendo la capacidad de consultar, agendar y eliminar medicamentos, así como la gestión de citas médicas (agendar turnos). 
+            La plataforma maximiza la utilidad mediante la integración de APIs externas: utiliza Google Calendar para establecer recordatorios y Geocoder para localizar y consultar las farmacias más cercanas al usuario.
            
             </p>
             <div class="flex flex-wrap gap-1 mb-4">
@@ -282,16 +317,44 @@
         </div>
       </div>
 
+      <div class="group grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+        <div class="md:col-span-2 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
+        <img src="icons/faceid.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
+        </div>
+        <div class="md:col-span-3">
+          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Control de asistencia en empresas</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Desarrollo de FaceAuditCheck, una plataforma inteligente diseñada para la auditoría y control de asistencia totalmente 
+            automatizados mediante reconocimiento facial. El sistema opera registrando automáticamente las entradas y salidas de los empleados y 
+            calculando la puntualidad en función de los horarios predefinidos. La herramienta es fundamental para la gestión de Recursos Humanos, ya que 
+            genera reportes detallados y precisos para optimizar la administración del tiempo y la trazabilidad de reuniones.
+           
+            </p>
+            <div class="flex flex-wrap gap-1 mb-4">
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">SQLite</span>
+              <span class="bg-primary/10 dark:bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition">Python</span>
+            </div>
+          <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30 transition-colors font-semibold" 
+                href="https://github.com/FranciscooGr/Sistema-Inteligente-de-Control-y-Auditor-a-de-Asistencia-en-empresas.git" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                <span>Ver en GitHub</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+        </div>
+      </div>
+      
+
       <!-- Proyecto 2 -->
         <div class="group grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
           <div class="md:col-span-2 md:order-first rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
           <img src="icons/tasks.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
           </div>
           <div class="md:col-span-3 md:order-last">
-            <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Aplicación de Gestor de Tareas • ABR 2025 - JUN 2025</h3>
+            <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Aplicación de Gestor de Tareas </h3>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              Aplicacion Para crear editar leer y borrar tus propias tareas con prioridad, estado, fecha. Pudiendo crear carpetas y ordenar las tareas en base a la carpeta correspondiente.
-              Implementando una arquitectura en capas
+             Desarrollo de una aplicación de productividad centrada en la gestión completa del ciclo de vida de las tareas (CRUD: Crear, Leer, Actualizar y Eliminar). 
+             La funcionalidad clave incluye la asignación de prioridad, estado y fecha de vencimiento a cada tarea. Para una organización eficiente, el sistema permite a los usuarios crear y gestionar carpetas donde las tareas pueden ser agrupadas y ordenadas lógicamente. 
+             El proyecto está construido bajo una sólida arquitectura en capas, garantizando la escalabilidad, la separación de preocupaciones y un mantenimiento sencillo del código.
             </p>
               <div class="flex flex-wrap gap-1 mb-4">
                 <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">Docker</span>
@@ -319,9 +382,10 @@
         <img src="icons/guardian.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
         </div>
         <div class="md:col-span-3">
-          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Juego "Guardian of the Castle" • ABR 2025 - JUL 2025</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">Guardian of the Castle es un desafiante juego de rol (RPG) 2D que sumerge al jugador en un oscuro y misterioso bosque. El objetivo es claro: luchar contra enemigos que acechan en las sombras, encontrar la llave oculta para acceder a un castillo imponente y derrotar al jefe final que lo custodia.
-            Este proyecto combina un combate dinámico con una progresión de personaje por medio de mejoras instantáneas, ofreciendo una experiencia de juego gratificante y orientada a la acción.</p>
+          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Juego "Guardian of the Castle" </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Desarrollo de Guardian of the Castle, un juego de rol (RPG) 2D inmersivo y desafiante ambientado en un sombrío bosque. 
+            El objetivo principal es la exploración y el combate dinámico contra enemigos, culminando en la localización de una llave y la derrota de un poderoso jefe final dentro de un castillo.
+             El juego se caracteriza por su progresión de personaje inmediata a través de mejoras instantáneas, ofreciendo una experiencia de acción fluida y altamente gratificante.</p>
 
             <div class="flex flex-wrap gap-1 mb-4">
               <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">Godot</span>
@@ -345,8 +409,10 @@
         <img src="icons/ecomerce.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
         </div>
         <div class="md:col-span-3 md:order-last">
-          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">E-commerce de Zapatillas • MAR 2024 - JUN 2024  </h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4">Aplicacion de E-commerce de zapatillas de todo tipo, donde se incluyen filtros, barra de busqueda, diseños responsivos con UX/UI, implementando tambien un carrito de compras.</p>
+          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">E-commerce de Zapatillas</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Desarrollo de una aplicación de comercio electrónico especializada en la venta de una amplia variedad de zapatillas.
+             La plataforma se centra en la experiencia de usuario (UX/UI), incorporando diseños totalmente responsivos que garantizan la usabilidad en cualquier dispositivo. Incluye funcionalidades esenciales como una barra de búsqueda avanzada y 
+            filtros de producto detallados para una navegación eficiente, así como un robusto sistema de carrito de compras para gestionar las transacciones.</p>
           <div class="flex flex-wrap gap-1 mb-4">
               <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">HTML</span>
               <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">JavaScript</span>
@@ -370,9 +436,11 @@
         <img src="icons/personajeIncognito.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
         </div>
         <div class="md:col-span-3">
-          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Juego "Adivina el Personaje Incógnito" • JUL 2023 - NOV 2023</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-4"> Desarrollo de juego interactivo donde mediante preguntas se debe adivinar el personaje incognito con solo 3 intentos, mientras la aplicacion trata de adivinar el tuyo. Implementación de interfaz gráfica con Swing para mejor experiencia de usuario 
-            y ademas un Diseño de lógica de juego para adivinanza de personajes
+          <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Juego "Adivina el Personaje Incógnito" </h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4"> Desarrollo de un juego de adivinanzas interactivo uno contra uno, donde el jugador y 
+            la aplicación compiten por adivinar un personaje incógnito. El sistema implementa una lógica de juego avanzada 
+            que intenta descifrar el personaje elegido por el usuario, mientras este tiene solo tres intentos para adivinar el personaje de la aplicación mediante preguntas. 
+            La experiencia se optimiza con una interfaz gráfica intuitiva desarrollada en Java Swing.
           </p>
           <div class="flex flex-wrap gap-1 mb-4">
               <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">Java</span>
@@ -395,9 +463,10 @@
         <img src="icons/snake.png" alt="Juego Serpientes y Escaleras" class="w-full h-full object-cover aspect-video">
       </div>
   <div class="md:col-span-3">
-    <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Juego "Serpientes Y escaleras" • MAR 2023 - JUN 2023</h3>
-    <p class="text-gray-600 dark:text-gray-300 mb-4"> Desarrollo del clásico juego aplicando paradigma de programación funcional. 
-      Implementación de algoritmos para gestión de tablero y reglas del juego 
+    <h3 class="text-2xl font-bold text-background-dark dark:text-background-light mb-2">Juego "Serpientes Y escaleras" </h3>
+    <p class="text-gray-600 dark:text-gray-300 mb-4"> Desarrollo de una versión del [Juego "Serpientes Y escaleras" implementando rigurosamente el paradigma de programación funcional. 
+      El proyecto se enfoca en la creación de un core de juego inmutable y sin efectos secundarios, utilizando funciones puras para la gestión del estado. 
+      Esto incluye la implementación de algoritmos declarativos eficientes para el manejo completo del tablero y la aplicación estricta de todas las reglas del juego.
     </p>
     <div class="flex flex-wrap gap-1 mb-4">
       <span class="bg-primary/10 dark:bg-primary/20 text-primary px-2 py-1 rounded-full text-sm font-medium hover:bg-primary/20 dark:hover:bg-primary/30 transition whitespace-nowrap">C++</span>
