@@ -1,0 +1,7 @@
+# Ignorar el sistema de diseño de la IA
+DESIGN.md
+
+# Ya que estamos, te dejo otras cosas que SIEMPRE debes ignorar en proyectos web:
+node_modules/
+.env
+.DS_Store
