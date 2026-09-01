@@ -178,6 +178,10 @@
       display: flex;
     }
 
+    #lb3:checked~.lb-3 {
+      display: flex;
+    }
+
     /* ── Scrollbar ── */
     ::-webkit-scrollbar {
       width: 6px;
@@ -363,7 +367,7 @@
             </div>
             <div class="glow-card rounded-xl p-5 text-center"
               style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.05);">
-              <span class="text-[28px] text-ln-text block" style="font-weight:590;">2</span>
+              <span class="text-[28px] text-ln-text block" style="font-weight:590;">3</span>
               <span class="font-mono text-[11px] text-ln-qua uppercase tracking-wider">Certificados</span>
             </div>
             <div class="glow-card rounded-xl p-5 text-center"
@@ -931,6 +935,29 @@
           </label>
         </div>
 
+        <!-- Certificado 3 -->
+        <div class="group glow-card rounded-xl overflow-hidden cursor-pointer"
+          style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.05);">
+          <label for="lb3" class="block cursor-pointer">
+            <div class="relative overflow-hidden">
+              <img alt="Certificado AWS Serverless"
+                class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
+                src="icons/awsServless.png" />
+              <div
+                class="absolute inset-0 bg-ln-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="font-mono text-[12px] text-ln-sec px-3 py-1.5 rounded-md"
+                  style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); font-weight:500;">
+                  Click para ampliar
+                </span>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-[14px] text-ln-text mb-1" style="font-weight:590;">Certificado AWS Serverless</h3>
+              <p class="font-mono text-[11px] text-ln-qua">AWS · Cloud Computing</p>
+            </div>
+          </label>
+        </div>
+
         <!-- Próximamente -->
         <div class="glow-card rounded-xl p-8 flex flex-col items-center justify-center text-center"
           style="border:1px dashed rgba(255,255,255,0.08); background:rgba(255,255,255,0.01);">
@@ -949,6 +976,7 @@
   <!-- Lightbox toggles -->
   <input class="hidden" id="lb1" type="checkbox" />
   <input class="hidden" id="lb2" type="checkbox" />
+  <input class="hidden" id="lb3" type="checkbox" />
 
   <!-- Lightbox 1 -->
   <div class="lb-1 fixed inset-0 z-[60] hidden items-center justify-center" style="background:rgba(0,0,0,0.88);">
@@ -971,6 +999,20 @@
       <img alt="Certificado CACIC ampliado" class="max-w-full max-h-[85vh] object-contain rounded-xl"
         style="border:1px solid rgba(255,255,255,0.08);" src="icons/certificadoCACIC.jpg" />
       <label for="lb2"
+        class="absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center cursor-pointer transition-colors hover:bg-white/10"
+        style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08);">
+        <span class="material-symbols-outlined text-ln-sec text-[18px]">close</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Lightbox 3 -->
+  <div class="lb-3 fixed inset-0 z-[60] hidden items-center justify-center" style="background:rgba(0,0,0,0.88);">
+    <label for="lb3" class="absolute inset-0 cursor-pointer"></label>
+    <div class="relative max-w-4xl w-[92%] max-h-[90vh] flex items-center justify-center">
+      <img alt="Certificado AWS Serverless ampliado" class="max-w-full max-h-[85vh] object-contain rounded-xl"
+        style="border:1px solid rgba(255,255,255,0.08);" src="icons/awsServless.png" />
+      <label for="lb3"
         class="absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center cursor-pointer transition-colors hover:bg-white/10"
         style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08);">
         <span class="material-symbols-outlined text-ln-sec text-[18px]">close</span>
